@@ -1,0 +1,27 @@
+.styledFont {
+    color:purple;
+  }
+  
+  img {
+      border: 1px solid transparent;
+     max-width:20%;
+    height: auto;
+  }
+  
+  h2 {
+      margin-left: 1600px;
+  }
+  
+  h1 {
+    background-color:teal;
+    border-style: solid;
+    border-width: medium;
+  }
+  
+  h3{
+    font-size:50px;
+  }
+  
+  form {
+    font-size:40px;
+  }
