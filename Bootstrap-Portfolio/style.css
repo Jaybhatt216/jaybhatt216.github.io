@@ -1,0 +1,93 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background: url(images/concrete_seamless.png);
+    margin-bottom: 60px;
+    background-color: black;
+}
+
+h1 {
+    color:red;
+}
+h2 {
+    color:purple;
+}
+
+#brand-style {
+    font-size: 25px;
+    background-color: black;
+    color:purple;
+    padding: 30px;
+}
+
+.navbar-text {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.style-nav-0 {
+    padding: 0;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+}
+
+.style-nav-1 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.bord {
+    border-right-style: solid;
+    border-right-width: .1px;
+    border-right-color: red;
+}
+
+.about-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 1em;
+}
+
+.img-1{
+    width: 198px;
+    height: 149px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #666666;
+    border-top-style: solid;
+    border-top-color: teal;
+    border-top-width: .5em;
+}
+p {
+ 
+    color: purple;
+}
+
+
+    
+.img-box-container-0 {
+    position: relative;
+    width: 100%;
+}
+.text-block-test-0 {
+    position: relative;
+    
+    color: purple;
+    
+    font-size: large;
+}
+h4{
+color: purple;
+}
