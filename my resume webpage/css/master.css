@@ -1,0 +1,34 @@
+
+html {
+	background: url(../images/city.jpg.jpg); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'helvetica Neue', sans-serif;
+}
+.prof-box{
+	width: 900px;
+	height: 1210px;
+	background: rgba(0,0,0,0.4);
+	padding: 40px;
+	color: white;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center;
+}
+.prof-pic{
+	border-radius: 200px;
+	height: 250px;
+	width: 250px;
+}
+h1 {
+	font-weight: 100;
+	letter-spacing: 6;
+	font-size: 40px;
+}
+
+p{
+	font-weight: 200;
+	letter-spacing: 1;
+}
