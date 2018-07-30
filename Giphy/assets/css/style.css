@@ -1,0 +1,9 @@
+.active-black-4 input[type=text] {
+    border: 1px solid black;
+    box-shadow: 0 0 0 1px black;
+    opacity: .8;
+}
+
+
+
+
