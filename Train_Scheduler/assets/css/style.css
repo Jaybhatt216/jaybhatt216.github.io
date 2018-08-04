@@ -1,0 +1,24 @@
+.jumbotron {
+    background-color: black;
+    color: red;
+    font-family: 'sans-serif typeface', cursive;
+}
+
+.sans-serif typeface {
+    font-family: 'sans-serif typeface', cursive;
+}
+
+.train-schedule-table{
+    background-color: black;
+    color: red;
+}
+
+.table-info{
+    background-color: red;
+    color: black;
+}
+.table-responsive{
+    background-color: black;
+    color: red;
+    
+}

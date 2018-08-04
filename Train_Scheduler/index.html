@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+
+
+<head>
+
+  
+  <title>Train Scheduler</title>
+ 
+  
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+ 
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+</head>
+
+<body>
+
+  
+  <div class="container">
+
+    
+    <div class="jumbotron rounded">
+      <h1 class="text-center">Train Schedules</h1>
+      <h4 class="text-center">check your Train</h4>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+       
+        <div class="card mb-4">
+          <div class="card-body rounded">
+            <h3 class="card-title text-center sans-serif typeface">Schedule</h3>
+            <div class="table-responsive">
+              <table class="table table-sm table-hover sans-serif typeface" id='train-schedule-table'>
+                <thead>
+                  <tr class="table-info">
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (Min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-4 p-4 rounded">
+          <div class="card-body">
+            <h3 class="card-title text-center train-schedule-table">Time</h3>
+            <form>
+              <div class="form-group row train-schedule-table">
+                <label for="train-name-input">Name</label>
+                <input class="form-control" id="train-name-input" type="text">
+              </div>
+              <div class="form-group row train-schedule-table">
+                <label for="destination-input">Destination</label>
+                <input class="form-control" id="destination-input" type="text">
+              </div>
+              <div class="form-group row train-schedule-table">
+                <label for="military-train-input">First Train Time (HH:-military time)</label>
+                <input class="form-control" id="military-train-input" placeholder="00:00" type="text">
+              </div>
+              <div class="form-group row train-schedule-table">
+                <label for="frequency-input">Frequency (min)</label>
+                <input class="form-control" id="frequency-input" type="text">
+              </div>
+              <button class="btn btn-info float-right train-schedule-table" id="add-train-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+  
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  
+  
+  
+  
+  <script src="assets/app.js"></script>
+
+</body>
+
+</html>
