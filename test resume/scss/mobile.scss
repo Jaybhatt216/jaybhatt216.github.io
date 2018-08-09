@@ -1,0 +1,81 @@
+
+
+
+//media Query mixins
+@mixin mediaSm {
+	@media screen and (max-width:500px){
+	@content;
+	}
+	}
+	@mixin mediaMd {
+	@media screen and (max-width:768px){
+	@content;
+	}
+	}
+	@mixin mediaLg {
+	@media screen and (min-width: 769px) and            	(max-width:1170px) {
+	@content;
+	}
+	}
+	@mixin mediaXL {
+	@media screen and (min-width:1171px){
+	@content;
+	}
+}
+
+
+
+
+// widescreen
+@include mediaXL {
+	
+}
+//desktop laptop
+@include mediaLg {
+	
+}
+//tablets & small laptop
+@include mediaMd {
+	main {
+	align-items: center;
+	text-align: center;
+
+	.lg-heading {
+	line-height: 1;
+	margin-bottom: 1rem;
+	}
+	}
+	ul.menu-nav,div.menu-branding{
+	float: none;
+	width: 100%;
+	min-height:0;
+
+
+	&.show{
+	transform: translate3d(0,0,0);
+	}
+	}
+	.menu-nav {
+	height: 75vh;
+	transform: translate3d(-100%,0,0);
+	font-size: 24px;
+	}
+	.menu-branding{
+	height: 25vh;
+	transform: translate3d(100%,0,0);
+	}
+}
+//phones
+@include mediaSm {
+	main#home h1 {
+	margin-top:10vh;
+	}
+}
+.about-info{
+	grid-template-areas:
+	'bioimage'
+	'bio'
+	'job1'
+	'job2'
+	'job3';
+}

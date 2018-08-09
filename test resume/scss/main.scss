@@ -1,0 +1,186 @@
+//to make a variable in scss use $
+@import 'menu';
+@import 'mobile';
+$primary-color:#444;
+$secondary-color:#eece1a;
+$thrid-color:#fff;
+//background image
+$show-home-image:true;
+$home-image: url(../images/city.jpg.jpg);
+$background-opacity:0.5;
+
+//@mixin is how you make a function in sass
+
+@mixin easeOut {
+	transition:all 0.5s ease-out;
+}
+@mixin background {
+	@if $show-home-image{
+	&#bg-img{
+	background: $home-image;
+	background-attachment: fixed;
+	background-size: cover;
+
+	&:after{
+		content:'';
+		position:absolute;
+		top:0;
+		right:0;
+		width:100%;
+		height:100%;
+		z-index: -7;
+		background: rgba($primary-color, $background-opacity);
+	}
+	}
+	}
+}
+
+//use * to select everything
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	@include background;
+	background:$primary-color;
+	color: set-text-color($primary-color);
+	height: 100%;
+	margin:0;
+	font-family: 'Segoe UI, Tahoma,
+	Geneva, Verdana, sans-serif';
+	line-height: 1.5;
+
+}
+//headings
+h1,
+h2,
+h3{
+	margin:0;
+	font-weight:400;
+	&.lg-heading{
+	font-size:6rem;
+	}
+	&.sm-heading{
+	margin-bottom: 2rem;
+	padding:0.2rem 1rem;
+	//background: rgba(lighten($primary-color,2), 0.5);
+	}
+}
+
+a {
+	color:#fff;
+	text-decoration:none;
+}
+
+header{
+	position: fixed;
+	z-index:2;
+	width:100%;
+}
+
+.text-secondary{
+	color: $secondary-color;
+}
+
+main{
+	padding: 4rem;
+	//height:100%;
+	min-height:calc(100vh - 60px);
+
+	.icons{
+	margin-top:1rem;
+
+	a{
+	padding:0.4rem;
+	&:hover{
+	color: $secondary-color;
+	//@include to call the mixin
+	@include easeOut();
+	
+	 }
+
+	}
+
+  }
+ &#home {
+ overflow: hidden;
+ h1{
+ margin-top: 20vh;
+ }
+ }
+}
+
+//set text color
+@function set-text-color($color){
+	@if (lightness($color)> 40){
+	@return #000;
+	}@else {
+	@return #fff;
+	}
+}
+
+//media Query mixins
+@mixin mediaSm {
+	@media screen and (max-width:500px){
+	@content;
+	}
+	}
+	@mixin mediaMd {
+	@media screen and (max-width:768px){
+	@content;
+	}
+	}
+	@mixin mediaLg {
+	@media screen and (min-width: 769px) and            	(max-width:1170px) {
+	@content;
+	}
+	}
+	@mixin mediaXL {
+	@media screen and (min-width:1171px){
+	@content;
+	}
+}
+
+.about-info{
+	display: grid;
+	grid-gap: 30px;
+	grid-template-areas:
+	'bio-image' 
+	'bio bio'
+	'job1 job2 job3';
+	grid-template-columns: repeat(3, 1fr);
+
+}
+.bio-image {
+	grid-area: bioimage;
+	margin:auto;
+	border-radius:50%;
+	border: $secondary-color 3px solid;
+}
+.bio{
+	grid-area:bio;
+	font-size: 1.5rem;
+}
+.job-1{
+	grid-area: job1
+}
+.job-2{
+	grid-area: job2
+}
+.job-3{
+	grid-area: job3
+}
+.job{
+	background: lighten($primary-color,5);
+	padding: 0.5rem;
+	border-bottom:$secondary-color 5px solid;
+}
+#main-footer{
+	text-align: center;
+	padding: 1rem;
+	background: darken($primary-color, 10);
+	color: set-text-color($primary-color);
+	height: 60px;
+}
+
